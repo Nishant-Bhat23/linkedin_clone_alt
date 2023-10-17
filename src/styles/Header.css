@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   background-color: white; /* LinkedIn's header background color */

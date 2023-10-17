@@ -1,5 +1,5 @@
 .sidebar{
-        top:80px;
+        top: 120px;
         width: 560px;
         height:fit-content;
         position:sticky;
@@ -8,6 +8,7 @@
         background-color: #fff;
         border: 1px solid #e1e1e1;
         padding: 20px;
+        padding-top: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
 }

@@ -1,6 +1,7 @@
 .feed {
   flex: 0.6;
   padding: 10px;
+  padding-top: 120px;
   border: 1px solid #e1e1e1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;

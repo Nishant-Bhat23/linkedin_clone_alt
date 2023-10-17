@@ -8,10 +8,16 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Header() {
-
+     const navigate = useNavigate();
+         const handleLogout = e =>{
+             localStorage.removeItem("sessionToken");
+             navigate("/");
+         }
 
   return (
 
@@ -34,7 +40,7 @@ function Header() {
                             <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs" />
                             <HeaderOption  Icon={ NotificationsIcon } title="Notification"/>
                             <HeaderOption Icon={PersonIcon} title="Profile"/>
-                            <HeaderOption  Icon={LogoutIcon} title="Logout" />
+                            <HeaderOption  Icon={LogoutIcon} title="Logout" onClick={handleLogout} navigate={navigate} />
                       </div>
            </div>
 
