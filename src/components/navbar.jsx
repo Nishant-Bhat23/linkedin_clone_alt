@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/navbar.css";
 import SearchIcon from '@mui/icons-material/Search';
-import HeaderOption from"./HeaderOption.js";
+import HeaderOption from"./HeaderOption.jsx";
 import HomeIcon from '@mui/icons-material/Home';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function navbar(){
 
@@ -32,6 +33,7 @@ export default function navbar(){
                             <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs"/>
                             <HeaderOption  Icon={ NotificationsIcon } title="Notification"/>
                             <HeaderOption Icon={PersonIcon} title="Profile"/>
+                            <HeaderOption  Icon={LogoutIcon} title="Logout" />
                       </div>
            </div>
 }
