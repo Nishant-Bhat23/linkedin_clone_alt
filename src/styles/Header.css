@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* LinkedIn's header background color */
+  padding: 10px 20px; /* Add padding to the top and sides */
+  width: 100%;
+  z-index: 999;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header-left>img {
+  width: 80px;
+  margin-right: 10px; /* Adjust the spacing between the logo and text */
+}
+
+.header-search{
+     display :flex;
+     padding:10px;
+     align-items:center;
+     height:22px;
+     border-radius:5px;
+     color:gray;
+     background-color:#eef3f8;
+}
+
+.header-search>input {
+  outline: none;
+  border: none;
+  background: none;
+  flex: 1;
+  padding: 5px; /* Add padding to the input field */
+  color: #000;
+}
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust the spacing between user-related icons */
+}
+
+.header-right>a{
+  padding-top:10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
