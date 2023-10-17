@@ -1,13 +1,11 @@
 
 .header {
   display: flex;
-  position: sticky;
   justify-content: space-between;
   align-items: center;
   background-color: white; /* LinkedIn's header background color */
   padding: 10px 20px; /* Add padding to the top and sides */
   width: 100%;
-  z-index: 999;
 }
 
 .header-left {
@@ -31,7 +29,7 @@
      background-color:#eef3f8;
 }
 
-.header-search input {
+.header-search>input {
   outline: none;
   border: none;
   background: none;

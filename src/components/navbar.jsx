@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+
 import "../styles/navbar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import HeaderOption from"./HeaderOption.jsx";
@@ -10,11 +10,14 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-export default function navbar(){
+function navBar(){
 
+    const handleLogout = e =>{
+          console.log("LOGED OUT SUCCESFULLY");
+    }
 
-   return
-<div className="header">
+   return (
+            <div className="header">
 
                       <div  className="header-left" >
                              <img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png" alt=" " />
@@ -32,11 +35,11 @@ export default function navbar(){
                             <HeaderOption  Icon={SupervisorAccountIcon} title="MyNetwork"/>
                             <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs"/>
                             <HeaderOption  Icon={ NotificationsIcon } title="Notification"/>
-                            <HeaderOption Icon={PersonIcon} title="Profile"/>
-                            <HeaderOption  Icon={LogoutIcon} title="Logout" />
+                            <HeaderOption  Icon={PersonIcon} title="Profile"/>
+                            <HeaderOption  Icon={LogoutIcon} title="Logout" onClick={handleLogout} />
                       </div>
            </div>
+           );
 }
 
-/*hello
-*/
+export default navBar;
