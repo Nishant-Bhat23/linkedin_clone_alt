@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Userlogin.css";
+import "../Styles/UserLogin.css";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 
-
- export default function UserRegistration() {
+function UserRegister() {
   const [isSignUpMode, setIsSignUpMode] = useState(false); // State to track sign-up mode
   const toggleMode = () => {
     setIsSignUpMode(!isSignUpMode); // Toggle between sign-in and sign-up mode
@@ -49,10 +48,11 @@ import { Helmet } from "react-helmet";
     if (firstname === "" || lastname === "") setFirstnameMessage("");
 
     if (password !== conpassword && conpassword !== "") {
-      setErrorPass("Password doesn't match");
+      setErrorPass("Password doesnt match!!!");
     } else {
       setErrorPass("");
     }
+
   }, [password, firstname, lastname, username, email, conpassword]);
 
   async function handleSubmit(e) {
@@ -80,6 +80,7 @@ import { Helmet } from "react-helmet";
       setErrorPass("");
       localStorage.setItem("sessionToken", response.data.user_id);
       navigate("/home");
+
     } catch (error) {
       setUsernameError(error.response.data.error);
       setShowError(true);
@@ -95,6 +96,7 @@ import { Helmet } from "react-helmet";
         password: logPass,
       })
       .then((res) => {
+        alert("welcome",username);
         localStorage.setItem("sessionToken", res.data.user_id);
         navigate("/home");
       })
@@ -102,7 +104,8 @@ import { Helmet } from "react-helmet";
         setLoginError(error.response.data.error);
       });
   }
-return(
+
+  return (
     <>
       <Helmet>
         <script
@@ -118,7 +121,7 @@ return(
               action="#"
               className={`sign-in-form ${isSignUpMode ? "hidden" : ""}`}
             >
-              <h2 className="title">Sign in</h2>
+              <h2 className="title">LOGIN</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
                 <input
@@ -152,10 +155,8 @@ return(
                 className="btn solid"
                 onClick={handleLogin}
               />
-              <p>Don't have an account?</p>
-              <button className="btn transparent" onClick={toggleMode}>
-                              Sign up
-              </button>
+                 <p className="sharath1"style={{color:'Black'}}> Do not have an account? <button className="link-button" type="button" onClick={toggleMode}>Signup</button></p>
+
             </form>
 
             {/* Sign-up Form */}
@@ -164,7 +165,8 @@ return(
               className={`sign-up-form ${isSignUpMode ? "" : "hidden"}`}
               onSubmit={handleSubmit}
             >
-              <h2 className="title">Sign up</h2>
+
+              <h2 className="title">SIGN UP</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
                 <input
@@ -267,7 +269,7 @@ return(
                 <i className="fas fa-Time"></i>
                 <input
                   type="date"
-                  placeholder='DD/MM/YY'
+                  placeholder="DD/MM/YYYY"
                   value={dob}
                   onChange={(e) => {
                     setDob(e.target.value);
@@ -276,16 +278,16 @@ return(
                 />
               </div>
               <input type="submit" className="btn" value="Sign up" />
-              <p>Already have an account?</p>
-              <button className="btn transparent" onClick={toggleMode}>
-                              Sign in
-              </button>
+               <p className="sharath1"style={{color:'Black'}}> Already have an account? <button className="link-button" type="button" onClick={toggleMode}>Login</button></p>
+
             </form>
           </div>
         </div>
 
 
-       </div>
-     </>
-)
+      </div>
+    </>
+  );
 }
+
+export default UserRegister;
