@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Main from './Main';
 import Right from './Right';
+import "../home.css";
 
 function Home() {
     const navigate = useNavigate()
@@ -15,12 +16,12 @@ function Home() {
 
     return (
         <>
-        <navbar/>
-        <main>
-        <div className='container'>
-        <Sidebar/>
-        <feed/>
-        </div>
+        <main className="Home">
+            <navbar/>
+            <div className='container'>
+               <Sidebar/>
+               <feed/>
+            </div>
         </main>
         </>
       );
