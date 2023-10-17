@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
-import Main from './Main';
-import Right from './Right';
+import Navbar from './Navbar.jsx';
+import Sidebar from './Sidebar.jsx';
+import "../styles/home.css";
 
 function Home() {
     const navigate = useNavigate()
@@ -15,12 +14,12 @@ function Home() {
 
     return (
         <>
-        <navbar/>
-        <main>
-        <div className='container'>
-        <Sidebar/>
-        <feed/>
-        </div>
+        <main className="Home">
+            <navbar/>
+            <div className='container'>
+               <Sidebar/>
+               <feed/>
+            </div>
         </main>
         </>
       );

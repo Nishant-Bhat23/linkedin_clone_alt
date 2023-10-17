@@ -1,5 +1,7 @@
 import React from 'react';
-import UserRegister from '../components/Userlogin';
+
+import UserRegistration from '../components/Userlogin';
+import Home from "../components/home.jsx";
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -10,7 +12,9 @@ function GlobalRoutes() {
 
     return (
         <Routes>
-                <Route path='/' element={<UserRegister/>} action={handleOut}/>
+
+                <Route path='/' element={<UserRegistration/>} action={handleOut}/>
+                <Route path='/home' element={<Home/>}/>
 
 
         </Routes>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "src/styles/navbar.css";
+import "../styles/navbar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import HeaderOption from"./HeaderOption.js";
 import HomeIcon from '@mui/icons-material/Home';
