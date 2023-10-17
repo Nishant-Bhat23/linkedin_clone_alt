@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideBar.css';
+import '../styles/SideBar.css';
 import AvatarIcon from '@mui/icons-material/AccountCircle';
 
 

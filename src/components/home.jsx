@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Main from './Main';
 import Right from './Right';
-import "../home.css";
+import "../styles/home.css";
 
 function Home() {
     const navigate = useNavigate()
