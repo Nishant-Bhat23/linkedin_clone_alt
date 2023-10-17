@@ -6,7 +6,7 @@
 }
 
 .form-container {
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
@@ -18,12 +18,22 @@
   transition: 1s 0.7s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
-  z-index: 5;
+  z-index: 3;
+  font-family:bold;
+}
+.link-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    font-size:20px;/* You can change the color to match your design */
 }
 
 
 .sign-in-form,.sign-up-form {
-  max-height:100%;
   position:relative;
   display: flex;
   align-items: center;
@@ -132,7 +142,7 @@ form.sign-in-form {
   border-radius: 50%;
   z-index: 6;
 }
-/*ANimation*/
+/ANimation/
 .form-container.sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
@@ -214,6 +224,6 @@ form.sign-in-form {
 
   .container.sign-up-mode:before {
     bottom:28%;
-    left: 50%;
-  }
+    left:50%;
+}
 }
