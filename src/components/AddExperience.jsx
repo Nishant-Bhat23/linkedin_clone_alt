@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, TextField, Button } from '@mui/material';
-import '../styles/AddEducationPage.css';
+import '../styles/AddEducationPage.css';//import your css file
 import  { useState } from 'react';
 
 
