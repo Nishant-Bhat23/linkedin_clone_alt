@@ -37,7 +37,7 @@ return(
                           <select
                             id="proficiency"
                             name="proficiency"
-                            value="outlined"
+                            value={proficiency}
                             onChange={(e) => setPorficiency(e.target.value)}
                             required
                             className="form-select"

@@ -8,6 +8,7 @@ import MyProfile from '../components/MyProfile.jsx';
 import AddExp from '../components/AddExperience.jsx';
 import AddEducationPage from '../components/AddEducationPage.jsx'
 import AddSkills from '../components/AddSkills.jsx'
+import AddAddress from '../components/AddAddress.jsx'
 function GlobalRoutes() {
     const handleOut = () =>{
         localStorage.removeItem("sesionToken")
@@ -23,6 +24,7 @@ function GlobalRoutes() {
                 <Route path='/MyProfile/AddExp' element={<AddExp/>} />
                 <Route path='/MyProfile/AddEdu' element={<AddEducationPage/>}/>
                 <Route path='/MyProfile/AddSkills' element={<AddSkills/>}  />
+                <Route path='/MyProfile/AddAddress' element={<AddAddress/>}  />
 
         </Routes>
      );
