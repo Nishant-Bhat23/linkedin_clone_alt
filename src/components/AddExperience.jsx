@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, TextField, Button } from '@mui/material';
-import '../styles/AddEducationPage.css';//import your css file
+import '../styles/AddEducationPage.css';
 import  { useState } from 'react';
 
 
@@ -10,8 +10,7 @@ function AddExp(){
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const handleSave = () => {
-      //Handle saving the experience information to the server or perform any desired action
-          // You can also reset the form fields after saving.
+      //saving the experience oage
     };
 return(
 <Container maxWidth="sm" className="add-education-container">
