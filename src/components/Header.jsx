@@ -18,7 +18,10 @@ function Header() {
              localStorage.removeItem("sessionToken");
              navigate("/");
          }
-
+         const handleOpenURL = () => {
+             const url="https://www.linkedin.com/jobs/search?trk=guest_homepage-basic_guest_nav_menu_jobs&position=1&pageNum=0";
+             window.open(url, '_blank'); // Opens the URL in a new tab/window
+         };
   return (
 
           <div className="header">
@@ -35,9 +38,9 @@ function Header() {
 
 
                       <div  className="header-right">
-                            <HeaderOption  Icon={HomeIcon} title="Home " />
+                            <HeaderOption  Icon={HomeIcon} title="Home " onClick={e=>{navigate('/')}}/>
                             <HeaderOption  Icon={SupervisorAccountIcon} title="MyNetwork" />
-                            <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs" />
+                            <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs"  onClick={handleOpenURL} />
                             <HeaderOption  Icon={ NotificationsIcon } title="Notification"/>
                             <HeaderOption Icon={PersonIcon} title="Profile"/>
                             <HeaderOption  Icon={LogoutIcon} title="Logout" onClick={handleLogout} navigate={navigate} />

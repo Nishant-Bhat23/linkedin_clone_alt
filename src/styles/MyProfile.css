@@ -1,0 +1,113 @@
+body {
+  background-color: #f2f2f2; /* Change to the shade of grey you prefer */
+  margin: 0;
+  padding: 0;
+}
+
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+
+  justify-content: flex-start; /* Align to the left */
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  font-size: 28px;
+  margin: 0;
+  align-items: left;
+  color: #333;
+}
+
+.profile-info p {
+  color: #555;
+  align-items: left;
+  margin: 0;
+}
+
+.profile-summary h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-summary p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center text and icons horizontally for other fields */
+  text-align: center; /* Center text horizontally for other fields */
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  width: 100%;
+  position: relative;
+}
+
+.profile-section h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.profile-section ul {
+  list-style: none;
+  align-items: left;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-section li {
+  margin-bottom: 10px;
+}
+
+.profile-section p {
+  color: #555;
+  margin: 0;
+}
+
+.add-icon {
+  font-size: 24px;
+  color: #0073b1;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 10px; /* Adjust the right margin as needed */
+}
+
+.add-icon:hover {
+  color:#000000 ;
+}
