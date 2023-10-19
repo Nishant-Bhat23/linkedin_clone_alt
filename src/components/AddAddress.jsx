@@ -27,13 +27,22 @@ function AddAddressPage() {
       <h1>Add Address</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Address Type</label>
-          <input
-            type="text"
-            name="address_type"
-            value={formData.address_type}
-            onChange={handleChange}
-          />
+         <label htmlFor="proficiency" className="form-label">
+                                     Address Type:
+                                   </label>
+                                   <select
+                                     id="dropdown"
+                                     name="address"
+                                     value={formData.address_type}
+                                     onChange={handleChange}
+                                     required
+                                     className="form-select"
+                                   >
+                                     <option value="">Select Address type</option>
+                                     <option value="Permanant">Permant</option>
+                                     <option value="current">current</option>
+                                   </select>
+
         </div>
         <div className="form-group">
           <label>Street Address</label>

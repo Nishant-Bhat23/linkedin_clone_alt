@@ -125,25 +125,15 @@ function MyProfile() {
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
+
       <div className="profile-section">
-        <h3>Interests</h3>
-        <ul>
-          {profile.interests.map((interest, index) => (
-            <li key={index}>{interest}</li>
-          ))}
-        </ul>
-        <Link to="/addinterest" className="add-icon">
-          <FontAwesomeIcon icon="plus" />
-        </Link>
-      </div>
-      <div className="profile-section">
-        <h3>Locations</h3>
+        <h3>Address</h3>
         <ul>
           {profile.locations.map((location, index) => (
             <li key={index}>{location}</li>
           ))}
         </ul>
-        <Link to="/addlocation" className="add-icon">
+        <Link to="/MyProfile/AddAddress" className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
