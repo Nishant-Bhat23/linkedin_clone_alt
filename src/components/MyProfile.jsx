@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from React Router
-import '../Styles/MyProfile.css';//this is css imported
+import '../styles/Myprofile.css';//this is css imported
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+library.add(faPlus)
 
-library.add(faPlus);
-
-const MyProfile = () => {
+function MyProfile() {
  const [profile, setProfile] = useState({
         name: 'John Doe',
         headline: 'Software Developer',
@@ -107,7 +106,7 @@ const MyProfile = () => {
             </li>
           ))}
         </ul>
-        <Link to="/addexperience" className="add-icon">
+        <Link to='/MyProfile/AddExp' className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
@@ -122,7 +121,7 @@ const MyProfile = () => {
             </li>
           ))}
         </ul>
-        <Link to="/addeducation" className="add-icon">
+        <Link to="/MyProfile/AddEdu" className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
@@ -155,7 +154,7 @@ const MyProfile = () => {
             <li key={index}>{skill}</li>
           ))}
         </ul>
-        <Link to="/addskill" className="add-icon">
+        <Link to="/MyProfile/AddSkills" className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
