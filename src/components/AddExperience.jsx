@@ -1,56 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, TextField, Button } from '@mui/material';
 import '../styles/AddEducationPage.css';
-import  { useState } from 'react';
 
+function AddExp() {
+  const initialFields = [
+    { key: 'companyName', label: 'Company Name' },
+    { key: 'position', label: 'Position' },
+    { key: 'startDate', label: 'Start Date' },
+    { key: 'endDate', label: 'End Date' },
+  ];
 
-function AddExp(){
-  const [companyName, setCompanyName] = useState('');
-  const [position, setPosition] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [experience, setExperience] = useState(initialFields.reduce((obj, field) => ({ ...obj, [field.key]: '' }), {}));
+
   const handleSave = () => {
-      //saving the experience oage
-    };
-return(
-<Container maxWidth="sm" className="add-education-container">
+    // Saving the experience page
+  };
+
+  const handleChange = (field, value) => {
+    setExperience({ ...experience, [field]: value });
+  };
+
+  return (
+    <Container maxWidth="sm" className="add-education-container">
       <h2>ADD EXPERIENCE</h2>
       <div className="education-form">
-        <TextField
-          label="Comapany Name"
-          fullWidth
-          variant="outlined"
-          value={companyName}
-          onChange={(e) => setCompanyName(e.target.value)}
-        />
-        <TextField
-          label="Positon"
-          fullWidth
-          variant="outlined"
-          value={position}
-          onChange={(e) => setPosition(e.target.value)}
-        />
-        <TextField
-          label="Start Date"
-          fullWidth
-          variant="outlined"
-          value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
-          />
+        {initialFields.map(field => (
           <TextField
-            label="End date"
+            key={field.key}
+            label={field.label}
             fullWidth
             variant="outlined"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
+            value={experience[field.key]}
+            onChange={(e) => handleChange(field.key, e.target.value)}
           />
-      </div><br/>
+        ))}
+      </div><br />
       <Button variant="contained" color="primary" onClick={handleSave}>
         Save
       </Button>
     </Container>
-
-);
-
+  );
 }
+
 export default AddExp;
