@@ -1,0 +1,53 @@
+.add-education-container {
+  background-color: #fff;
+  border: 1px solid #e1e9ef;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-top: 16px;
+}
+
+.add-education-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #0073b1; /* LinkedIn blue */
+}
+
+.education-form {
+  display: grid;
+  gap: 16px;
+}
+
+/* Apply styles to the text fields */
+.add-education-container .MuiTextField-root {
+  background-color: #f3f6f7;
+  border: 1px solid #d1d9e0;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+/* Apply styles to labels */
+.add-education-container .MuiFormLabel-root {
+  font-size: 16px;
+}
+
+/* Apply styles to the "Save" button */
+.add-education-container .MuiButton-containedPrimary {
+  background-color: #0073b1;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-education-container .MuiButton-containedPrimary:hover {
+  background-color: #005c99;
+}
+
+.add-education-container .MuiButton-containedPrimary:disabled {
+  background-color: #b5c0c6;
+  cursor: not-allowed;
+}

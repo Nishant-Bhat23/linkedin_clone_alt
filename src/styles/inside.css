@@ -1,0 +1,64 @@
+.body{
+    background-color: #425479;
+    background-image: url("https://elements-cover-images-0.imgix.net/b09452e4-7ce3-4f69-af7b-817eb5a07d20?auto=compress%2Cformat&fit=max&w=1370&s=cc2954b650f3a5da97660cbb46e759d6");
+}
+.Add-container{
+display: flex;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url("https://media.gettyimages.com/id/1370607230/video/3d-animation-business-man-sitting-working-typing-on-laptop-alpha-channel-luma-matte-3d.jpg?s=640x640&k=20&c=WU4FG01j75vgl61EyBltCImLq3910joy-dfviNkuQ_o=");
+  background-size: cover;
+  background-position: center center ;
+}
+  
+ 
+ 
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    width: 100%; /* Set the width to 100% to make the input fields equal size */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  button {
+    width: 10%;
+    padding: 10px;
+    background-color: white;
+    color: #ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+    border-color: black;
+  }
+  
+  button:hover {
+    background-color: blue;
+    
+  }
+  
