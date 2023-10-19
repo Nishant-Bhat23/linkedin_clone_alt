@@ -10,7 +10,8 @@ function AddExp(){
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const handleSave = () => {
-      //saving the experience oage
+      //Handle saving the experience information to the server or perform any desired action
+          // You can also reset the form fields after saving.
     };
 return(
 <Container maxWidth="sm" className="add-education-container">
