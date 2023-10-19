@@ -1,11 +1,16 @@
 import React from 'react';
 import '../styles/SideBar.css';
 import AvatarIcon from '@mui/icons-material/AccountCircle';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function SideBar()
 {
 
+const navigate = useNavigate();
+const handleOpenURL = () => {
+             const url="https://www.linkedin.com/jobs/search?trk=guest_homepage-basic_guest_nav_menu_jobs&position=1&pageNum=0";
+             window.open(url, '_blank'); // Opens the URL in a new tab/window
+         };
 
 return(
       <div className="sidebar">
@@ -31,8 +36,9 @@ return(
              <h3 className="sidebar__discoverHeader">Discover</h3>
                      <ul className="sidebar__discoverList">
                        <li className="sidebar__discoverItem">People You May Know</li>
-                       <li className="sidebar__discoverItem">Jobs</li>
+                       <li className="sidebar__discoverItem" onClick={handleOpenURL}>Jobs</li>
                        <li className="sidebar__discoverItem">Groups</li>
+                       <li className="sidebar__discoverItem" onClick={e =>{ navigate("/AboutUs")}}>AboutUs</li>
                      </ul>
          </div>
 
