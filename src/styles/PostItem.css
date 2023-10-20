@@ -43,12 +43,12 @@
 
 .feed__postActions {
   display:flex;
-  gap: 10px;
   background: none;
   border: none;
   cursor: pointer;
   color: #0073b1;
   font-weight: bold;
   font-size: 0.9rem;
+  max-width:50px;
 
 }
