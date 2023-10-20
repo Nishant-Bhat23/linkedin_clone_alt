@@ -1,26 +1,24 @@
 .feed {
   flex: 0.6;
   padding: 10px;
-  padding-top: 120px;
   border: 1px solid #e1e1e1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
+.feed__createPost {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  padding: 15px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
 .icon{
     padding-right:10px;
     padding-top:8px;
-}
-
-
-.feed__createPost {
-        display: flex;
-        justify-content:space-between;
-        background-color: white;
-        border: 1px solid #e1e1e1;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        border-bottom: 1px solid #e1e1e1;
 }
 
 .feed__userAvatar {
@@ -54,7 +52,7 @@
   border: none;
   border-radius: 2px;
   margin-top:10px;
-  padding: 10px 20px;
+  padding: 10px ;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -70,61 +68,4 @@
   border-radius: 15px;
   font-size: 1rem;
   outline: none;
-}
-
-.feed__postItem {
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
-.feed__postUser {
-  display: flex;
-  align-items: center;
-}
-
-.feed__postUser img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.feed__postUserName {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.feed__postUserDescription {
-  color: #555;
-  font-size: 0.9rem;
-}
-
-.feed__postText {
-  margin: 10px 0;
-}
-
-.feed__postImage {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin: 10px 0;
-}
-
-.feed__postActions {
-  display: flex;
-  gap: 10px;
-}
-
-.feed__likeButton,
-.feed__commentButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #0073b1;
-  font-weight: bold;
-  font-size: 0.9rem;
 }
