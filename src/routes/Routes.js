@@ -17,8 +17,8 @@ function GlobalRoutes() {
     return (
         <Routes>
 
-                <Route path='/H' element={<UserRegistration/>} action={handleOut}/>
-                <Route path='/' element={<Home/>} />
+                <Route path='/' element={<UserRegistration/>} action={handleOut}/>
+                <Route path='/home' element={<Home/>} />
                 <Route path='/AboutUs' element={<AboutUs/>} />
                 <Route path='/MyProfile' element={<MyProfile/>} />
                 <Route path='/MyProfile/AddExp' element={<AddExp/>} />

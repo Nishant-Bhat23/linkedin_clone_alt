@@ -1,10 +1,26 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
+import axios from 'axios';
 import '../styles/SideBar.css';
 import AvatarIcon from '@mui/icons-material/AccountCircle';
 import { useNavigate } from 'react-router-dom';
 
 export default function SideBar()
 {
+const [currentUser,setCurrentUser] = useState([])
+
+    async function handleCurrentUser(){
+        const loggedInUser = localStorage.getItem("sessionToken")
+        try {
+            const response = await axios.get('http://localhost:8080/users/' + loggedInUser + '/getUser')
+            setCurrentUser(response.data)
+        } catch (error) {
+            console.log("error")
+        }
+    }
+
+    useEffect(()=>{
+        handleCurrentUser()
+    },[])
 
 const navigate = useNavigate();
 const handleOpenURL = () => {
@@ -18,8 +34,8 @@ return(
              <img src="https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1380&t=st=1697438511~exp=1697439111~hmac=704212d3be0af0d3cb2357538481daaaf76d1b2dcb2f720e20ccc909a7d4feca"
              alt=""/>
              <AvatarIcon className="sidebar-avatar"/>
-             <h2 className='sidebar_userName'>USER_NAME</h2>
-             <h4 className='sidebar__userDescription '>EMAIL_ID</h4>
+             <h2 className='sidebar_userName'>{currentUser.username}</h2>
+             <h4 className='sidebar__userDescription '>{currentUser.email}</h4>
 
          </div>
          <div className="sidebar_status">
