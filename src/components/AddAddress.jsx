@@ -34,12 +34,12 @@ function AddAddressPage() {
                                      id="dropdown"
                                      name="address"
                                      value={formData.address_type}
-                                     onChange={handleChange}
+                                     onClick={(e)=> setFormData(e.target)}
                                      required
                                      className="form-select"
                                    >
                                      <option value="">Select Address type</option>
-                                     <option value="Permanant">Permant</option>
+                                     <option value="Permanent">Permanent</option>
                                      <option value="current">current</option>
                                    </select>
 
