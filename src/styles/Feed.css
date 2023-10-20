@@ -1,6 +1,7 @@
 .feed {
   flex: 0.6;
   padding: 10px;
+  padding-top:120px;
   border: 1px solid #e1e1e1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -44,9 +45,11 @@
        margin-bottom: 20px;
 
 }
+
 .feed__postButton {
   background-color: #0073b1;
   height:40px;
+  width:60px;
   color: #fff;
   font-weight: bold;
   border: none;
