@@ -22,6 +22,7 @@ const [currentUser,setCurrentUser] = useState([])
         handleCurrentUser()
     },[])
 
+
 const navigate = useNavigate();
 const handleOpenURL = () => {
              const url="https://www.linkedin.com/jobs/search?trk=guest_homepage-basic_guest_nav_menu_jobs&position=1&pageNum=0";

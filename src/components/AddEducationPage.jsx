@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button } from '@mui/material';
 import '../styles/AddEducationPage.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function AddEducationPage() {
+ const loggedInUser=localStorage.getItem("sessionToken");
+ const navigate = useNavigate()
   const [educationData, setEducationData] = useState({
     tenthSchoolName: '',
     tenthSchoolCity: '',
@@ -20,10 +24,38 @@ function AddEducationPage() {
     graduationYear: '',
   });
 
-  const handleSave = () => {
-    // Handle saving the education information to the server or perform any desired action
-    // You can also reset the form fields after saving.
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(educationData)
+      // Send a POST request to your Spring API with the education data
+      await axios.post('http://localhost:8080/education/addEducation', educationData);
+      navigate('/MyProfile/AddEdu')
+      // Clear the form after successful submission
+      setEducationData({
+        userId: loggedInUser, // Reset user ID
+        tenth_schoolname: '',
+        tenth_school_city: '',
+        tenth_pass_year: '',
+        college_name: '',
+        college_city: '',
+        twelth_pass_year: '',
+        degree: '',
+        degree_collegename: '',
+        degree_collegeplace: '',
+        university_name: '',
+        branch: '',
+        current_year: '',
+        cgpa: '',
+        graduation_year: '',
+      });
+    } catch (error) {
+
+      console.error('Error adding education data:', error);
+    }
   };
+
 
   const handleChange = (field, value) => {
     setEducationData({ ...educationData, [field]: value });
@@ -44,7 +76,7 @@ function AddEducationPage() {
           />
         ))}
       </div>
-      <Button variant="contained" color="primary" onClick={handleSave}>
+      <Button variant="contained" color="primary" onClick={ handleSubmit}>
         Save
       </Button>
     </Container>

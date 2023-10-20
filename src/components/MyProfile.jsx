@@ -78,7 +78,7 @@ function MyProfile() {
    }, []);
 
   return (
-    <div className=" glassy-container">
+    <div className="profile">
       <div className="profile-header">
         <img src="https://placekitten.com/150/150" alt="Profile" className="profile-picture" />
         <div className="profile-info">

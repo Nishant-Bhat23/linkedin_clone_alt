@@ -1,26 +1,27 @@
 body {
-  background-color: #bde0e3; /* Change to the shade of grey you prefer */
+  background-color: #f2f2f2; /* Change to the shade of grey you prefer */
   margin: 0;
   padding: 0;
-  background-image: url("https://img.freepik.com/free-photo/soft-vintage-gradient-blur-background-with-pastel-colored-well-use-as-studio-room-product-presentation-banner_1258-107712.jpg");
-  background-size: cover;
 }
 
-.glassy-container {
+.profile {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  backdrop-filter: none;
-  
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
 .profile-header {
   display: flex;
-  justify-content: flex-start;
+
+  justify-content: flex-start; /* Align to the left */
   margin-bottom: 20px;
 }
 
@@ -29,7 +30,6 @@ body {
   height: 150px;
   border-radius: 50%;
   margin-right: 20px;
-  justify-self: start;
 }
 
 .profile-info {
@@ -44,7 +44,7 @@ body {
 }
 
 .profile-info p {
-  color: #1b1111;
+  color: #555;
   align-items: left;
   margin: 0;
 }
@@ -66,9 +66,10 @@ body {
   flex-direction: column;
   align-items: left; /* Center text and icons horizontally for other fields */
   text-align: center; /* Center text horizontally for other fields */
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid black;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
   border-radius: 6px;
   width: 100%;
   position: relative;
@@ -109,7 +110,4 @@ body {
 
 .add-icon:hover {
   color:#000000 ;
-}
-.profile-header{
-  align-items: start;
 }
