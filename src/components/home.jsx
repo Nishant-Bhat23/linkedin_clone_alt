@@ -1,9 +1,19 @@
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
 import "../styles/home.css";
 import Feed from './Feed.jsx';
-function Home() {
 
+
+function Home() {
+     const navigate = useNavigate()
+        useEffect(() => {
+            if(!localStorage.getItem('sessionToken')){
+                navigate('/')
+            }
+        },[])
 
     return (
     <>

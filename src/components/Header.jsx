@@ -38,7 +38,7 @@ function Header() {
 
 
                       <div  className="header-right">
-                            <HeaderOption  Icon={HomeIcon} title="Home " onClick={e=>{navigate('/')}}/>
+                            <HeaderOption  Icon={HomeIcon} title="Home " onClick={e=>{navigate('/home')}}/>
                             <HeaderOption  Icon={SupervisorAccountIcon} title="MyNetwork" />
                             <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs"  onClick={handleOpenURL} />
                             <HeaderOption  Icon={ NotificationsIcon } title="Notification"/>

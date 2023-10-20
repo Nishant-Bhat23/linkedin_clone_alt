@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios';
 import '../styles/SideBar.css';
-import AvatarIcon from '@mui/icons-material/AccountCircle';
+
 import { useNavigate } from 'react-router-dom';
 
 export default function SideBar()
@@ -32,9 +32,9 @@ const handleOpenURL = () => {
 return(
       <div className="sidebar">
          <div className="sidebar-top">
-             <img src="https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1380&t=st=1697438511~exp=1697439111~hmac=704212d3be0af0d3cb2357538481daaaf76d1b2dcb2f720e20ccc909a7d4feca"
+             <img className="a0" src="https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1380&t=st=1697438511~exp=1697439111~hmac=704212d3be0af0d3cb2357538481daaaf76d1b2dcb2f720e20ccc909a7d4feca"
              alt=""/>
-             <AvatarIcon className="sidebar-avatar"/>
+             <img src={`${currentUser.picture}`} className="sidebar-avatar"/>
              <h2 className='sidebar_userName'>{currentUser.username}</h2>
              <h4 className='sidebar__userDescription '>{currentUser.email}</h4>
 
