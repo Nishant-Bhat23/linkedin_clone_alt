@@ -8,20 +8,20 @@ function AddEducationPage() {
  const loggedInUser=localStorage.getItem("sessionToken");
  const navigate = useNavigate()
   const [educationData, setEducationData] = useState({
-    tenthSchoolName: '',
-    tenthSchoolCity: '',
-    tenthPassYear: '',
-    collegeName: '',
-    collegeCity: '',
-    twelfthPassYear: '',
+    tenth_schoolname: '',
+    tenth_school_city: '',
+    tenth_pass_year: '',
+    college_Name: '',
+    college_City: '',
+    twelfth_Pass_Year: '',
     degree: '',
-    degreeCollegeName: '',
-    degreeCollegePlace: '',
-    universityName: '',
+    degree_collegename: '',
+    degree_Collegeplace: '',
+    university_name: '',
     branch: '',
-    currentYear: '',
+    current_year: '',
     cgpa: '',
-    graduationYear: '',
+    graduation_year: '',
   });
 
 

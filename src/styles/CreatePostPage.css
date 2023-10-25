@@ -1,0 +1,61 @@
+.create-post-container {
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.create-post{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  padding: 20px;
+}
+
+.create-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}
+.create-post-content .MuiOutlinedInput-root {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.create-post-description,
+.create-post-base-content {
+  margin-top: 16px;
+}
+
+.create-post-button {
+  text-align: right;
+}
+
+.create-post-button button {
+  background-color: #0a66c2;
+  color: #fff;
+}
+
+.create-post-button button:hover {
+  background-color: #004182;
+}
