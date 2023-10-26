@@ -22,10 +22,6 @@ function AddAddressPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSelectChange = (e) => {
-      const {  value } = e.target.value;
-      setFormData({ ...formData, [formData.address_type]: value });
-    };
 
 
   const handleSubmit = async(e) => {

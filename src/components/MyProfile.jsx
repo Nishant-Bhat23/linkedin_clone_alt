@@ -67,7 +67,7 @@ console.log(education)
         <ul>
           {/* Map and display user's experience */}
         </ul>
-        <Link to='/MyProfile/AddExp' className="add-icon">
+        <Link to='/home/MyProfile/AddExp' className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
@@ -76,7 +76,7 @@ console.log(education)
         <ul>
           {/* Map and display user's education */}
         </ul>
-        <Link to="/MyProfile/AddEdu" className="add-icon">
+        <Link to="/home/MyProfile/AddEdu" className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
@@ -85,7 +85,7 @@ console.log(education)
         <ul>
           {/* Map and display user's address */}
         </ul>
-        <Link to="/MyProfile/AddAddress" className="add-icon">
+        <Link to="/home/MyProfile/AddAddress" className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>
@@ -94,7 +94,7 @@ console.log(education)
         <ul>
           {/* Map and display user's skills */}
         </ul>
-        <Link to="/MyProfile/AddSkills" className="add-icon">
+        <Link to="/home/MyProfile/AddSkills" className="add-icon">
           <FontAwesomeIcon icon="plus" />
         </Link>
       </div>

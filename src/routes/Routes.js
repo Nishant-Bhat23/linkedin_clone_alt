@@ -20,11 +20,11 @@ function GlobalRoutes() {
                 <Route path='/' element={<UserRegistration/>} action={handleOut}/>
                 <Route path='/home' element={<Home/>} />
                 <Route path='/AboutUs' element={<AboutUs/>} />
-                <Route path='/MyProfile' element={<MyProfile/>} />
-                <Route path='/MyProfile/AddExp' element={<AddExp/>} />
-                <Route path='/MyProfile/AddEdu' element={<AddEducationPage/>}/>
-                <Route path='/MyProfile/AddSkills' element={<AddSkills/>}  />
-                <Route path='/MyProfile/AddAddress' element={<AddAddress/>}  />
+                <Route path='/home/MyProfile' element={<MyProfile/>} />
+                <Route path='/home/MyProfile/AddExp' element={<AddExp/>} />
+                <Route path='/home/MyProfile/AddEdu' element={<AddEducationPage/>}/>
+                <Route path='/home/MyProfile/AddSkills' element={<AddSkills/>}  />
+                <Route path='/home/MyProfile/AddAddress' element={<AddAddress/>}  />
 
         </Routes>
      );

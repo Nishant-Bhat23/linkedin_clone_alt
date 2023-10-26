@@ -42,7 +42,7 @@ function Header() {
                             <HeaderOption  Icon={SupervisorAccountIcon} title="MyNetwork" />
                             <HeaderOption  Icon={ BusinessCenterIcon } title="Jobs"  onClick={handleOpenURL} />
                             <HeaderOption  Icon={ NotificationsIcon } title="Notification"/>
-                            <HeaderOption Icon={PersonIcon} title="Profile"  onClick={e=>{navigate('/MyProfile')}}/>
+                            <HeaderOption Icon={PersonIcon} title="Profile"  onClick={e=>{navigate('/home/MyProfile')}}/>
                             <HeaderOption  Icon={LogoutIcon} title="Logout" onClick={handleLogout} navigate={navigate} />
                       </div>
            </div>

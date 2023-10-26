@@ -8,7 +8,7 @@ function Feed() {
   const [posts, setPosts] = useState([]);
 
   const initialPost = {
-    id: 1,
+    post_id: 1,
     picture: 'https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png',
     userName: 'Sharat Bhat',
     userDescription: 'Full-Stack Developer',

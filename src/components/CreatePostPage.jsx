@@ -11,21 +11,23 @@ function CreatePostPage(props) {
   const navigate = useNavigate();
   const { open, onClose, title, content } = props;
   const [postData, setPostData] = useState({
-    content: '',
-    description: '',
-    baseContent: '',
+    content:null,
+    descr: '',
     imageLink: '',
-    postdate:'',
+    postdate:new Date()
   });
 
   const handlePost =async() => {
-    // Handle posting the content to the server or perform any desired action
-    // You can also reset the form fields after posting.
+       const formData = new FormData();
+        formData.append("content", postData.content);
+        formData.append("post_date",postData.postdate );
+        formData.append("descr", postData.description);
+        formData.append("imageLink", postData.imageLink);
     let user = localStorage.getItem("sessionToken");
         try {
           await axios.post(
             "http://localhost:8080/post/" + user + "/postupload",
-            postData
+            formData
           );
           navigate('/home/myprofile')
         } catch (error) {
@@ -33,10 +35,11 @@ function CreatePostPage(props) {
         }
     console.log(postData)
     setPostData({
-      content: '',
-      description: '',
-      baseContent: '',
+      content:null,
+      descr: '',
       imageLink: '',
+      postdate:'',
+
     });
   };
 
@@ -54,14 +57,11 @@ function CreatePostPage(props) {
             <button onClick={onClose} className="close-button">Close</button>
           </div>
           <div className="create-post-content">
-            <TextField
-              label="What's on your mind?"
-              fullWidth
-              multiline
-              variant="outlined"
-              value={postData.content}
-              onChange={(e) => handleChange('content', e.target.value)}
-            />
+           <input
+                       type="file"
+                       accept="image/*"  // Specify the accepted file types, e.g., images
+                       onChange={(e) => handleChange('content', e.target.files[0])}
+           />
           </div>
           <div className="create-post-description">
             <DescriptionIcon className="description-icon" />
@@ -80,8 +80,8 @@ function CreatePostPage(props) {
               fullWidth
               multiline
               variant="outlined"
-              value={postData.baseContent}
-              onChange={(e) => handleChange('baseContent', e.target.value)}
+              value={postData.base64Content}
+              onChange={(e) => handleChange('base64Content', e.target.value)}
             />
           </div>
           <div className="create-post-image-link">
