@@ -1,0 +1,21 @@
+/* styles for AddExperiencePage */
+.add-experience-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.add-experience-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.experience-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Apply more styles as needed */
