@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -19,22 +20,24 @@
   display: grid;
   grid-template-columns: 1fr;
   z-index: 3;
-  font-family:bold;
+  font-family: bold;
 }
+
 .link-button {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    text-decoration: underline;
-    color: blue;
-    font-size:20px;/* You can change the color to match your design */
+  background: none;
+  position: relative;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+  font-size: 20px; /* You can change the color to match your design */
 }
 
-
-.sign-in-form,.sign-up-form {
-  position:relative;
+.sign-in-form,
+.sign-up-form {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,12 +45,12 @@
   padding: 0rem 5rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
-  grid-column: 1/2 ;
+  grid-column: 1/2;
   grid-row: 1/2;
 }
 
 form.sign-up-form {
-  opacity:0;
+  opacity: 0;
   z-index: 1;
 }
 
@@ -89,7 +92,7 @@ form.sign-in-form {
   font-weight: 600;
   font-size: 1.1rem;
   color: #333;
-  overflow: hidden ;
+  overflow: hidden;
 }
 
 .input-field input::placeholder {
@@ -102,11 +105,11 @@ form.sign-in-form {
   font-size: 1rem;
 }
 
-.btn {
+.btn.solid {
   width: 100%;
   max-width: 200px;
   padding: 10px;
-  background-color: #5995fd;
+  background-color: blue;
   border: none;
   outline: none;
   border-radius: 4px;
@@ -115,7 +118,7 @@ form.sign-in-form {
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
-  transition: background-color 0.5s;  /* Modified animation duration */
+  transition: background-color 0.5s;
 }
 
 .btn:hover {
@@ -125,7 +128,7 @@ form.sign-in-form {
 .btn.transparent {
   margin: 0;
   border: 2px solid #fff;
-  width:200px;
+  width: 200px;
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
@@ -142,7 +145,49 @@ form.sign-in-form {
   border-radius: 50%;
   z-index: 6;
 }
-/ANimation/
+
+/* Maintain the blue color when hovering over the "Login" button */
+.btn.solid:hover {
+  background-color: blue;
+}
+
+/* Align the "Do not have an account?" and "Signup" links on the same line */
+.sharath1 button.link-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Align the "Already have an account?" and "Login" links on the same line */
+.sign-in-form .sharath1 button.link-button,
+.sign-up-form .sharath1 button.link-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply the same properties to the "Signup" button as the "Login" button */
+.sign-up-form .btn {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  background-color: blue;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.sign-up-form .btn:hover {
+  background-color: blue;
+}
+
+/* Animation */
 .form-container.sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
@@ -157,7 +202,6 @@ form.sign-in-form {
   opacity: 0;
   z-index: 1;
 }
-
 
 @media (max-width: 870px) {
   .container {
@@ -204,10 +248,6 @@ form.sign-in-form {
   }
 }
 
-
-
-
-
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
@@ -218,12 +258,56 @@ form.sign-in-form {
   }
 
   .container:before {
-    bottom:72%;
+    bottom: 72%;
     left: 50%;
   }
 
   .container.sign-up-mode:before {
-    bottom:28%;
-    left:50%;
+    bottom: 28%;
+    left: 50%;
+  }
 }
+/* Your existing CSS */
+
+.btn.solid:hover {
+  background-color: blue; /* Change the hover background color for login button */
+}
+
+/* Add the following CSS to align the links on the same line */
+.sharath1 {
+  display: flex;
+  text-align: center;
+    position: relative;
+}
+.sharath1 {
+  display: flex;
+  align-items: center;
+}
+
+.sharath1 .link-button {
+  background: none; /* To remove the background on hover */
+  padding: 0; /* To remove padding and reduce the gap between text and button */
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+  font-size: 20px;
+
+}
+
+
+.link-button {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+.link-button:hover {
+  color: blue;
+  background: transparent;
 }

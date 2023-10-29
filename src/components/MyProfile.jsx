@@ -58,10 +58,7 @@ console.log(education)
       </div>
       {/* Display user's summary, experience, education, address, and skills */}
       {/* Use currentUser to populate the data */}
-      <div className="profile-summary">
-        <h2>Summary</h2>
-        <p>{/* Add user's summary here */}</p>
-      </div>
+
       <div className="profile-section">
         <h2>Experience</h2>
         <ul>
@@ -81,7 +78,7 @@ console.log(education)
         </Link>
       </div>
       <div className="profile-section">
-        <h3>Address</h3>
+        <h2>Address</h2>
         <ul>
           {/* Map and display user's address */}
         </ul>
@@ -90,7 +87,7 @@ console.log(education)
         </Link>
       </div>
       <div className="profile-section">
-        <h3>Skills</h3>
+        <h2>Skills</h2>
         <ul>
           {/* Map and display user's skills */}
         </ul>
