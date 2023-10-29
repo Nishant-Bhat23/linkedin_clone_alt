@@ -12,12 +12,12 @@ function AddEducationPage() {
     tenth_schoolname: '',
     tenth_school_city: '',
     tenth_pass_year: '',
-    college_Name: '',
-    college_City: '',
-    twelfth_Pass_Year: '',
+    college_name: '',
+    college_city: '',
+    twelth_pass_year: '',
     degree: '',
     degree_collegename: '',
-    degree_Collegeplace: '',
+    degree_collegeplace: '',
     university_name: '',
     branch: '',
     current_year: '',
@@ -32,7 +32,7 @@ function AddEducationPage() {
       console.log(educationData)
       // Send a POST request to your Spring API with the education data
       await axios.post('http://localhost:8080/education/addEducation', educationData);
-      navigate('/MyProfile/AddEdu')
+      navigate('/home')
       // Clear the form after successful submission
       setEducationData({
         userId: loggedInUser, // Reset user ID
