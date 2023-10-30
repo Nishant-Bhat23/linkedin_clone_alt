@@ -28,12 +28,9 @@ function AddAddressPage() {
     e.preventDefault();
      try {
    // Send a POST request to your Spring API with the addresses data
-         await axios.post(
-           `http://localhost:8080/address/${loggedUser}/addAddress`,formData
+     await axios.post(`http://localhost:8080/address/${loggedUser}/addAddress`, formData);
 
-         );
-
-         navigate("/MyProfile/AddAddress");
+         navigate("/home");
 
                setFormData({
                         userId: loggedUser, // Reset user ID

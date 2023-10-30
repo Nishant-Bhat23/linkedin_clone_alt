@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Userlogin.css";
-import "../styles/Userlogin.css";
 import axios from "axios";
 import {  useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
 
 function UserRegister() {
   const [isSignUpMode, setIsSignUpMode] = useState(false); // State to track sign-up mode
@@ -36,7 +34,7 @@ function UserRegister() {
     const regExp =
       /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
     if (!regExp.test(password)) {
-      setMessage("Password is weak");
+      setMessage("The password is weak!! Note:The password length should be >=8 and should have combination of special charecters,digits and alphabets.");
     } else {
       setMessage("");
     }
@@ -80,12 +78,12 @@ function UserRegister() {
       setDob("");
       setErrorPass("");
       localStorage.setItem("sessionToken", response.data.user_id);
-      navigate("/home");
+      navigate("/");
 
     } catch (error) {
       setUsernameError(error.response.data.error);
       setShowError(true);
-      console.log("User Registration failed:", error.response.data.error);
+      console.log("User Registration failed,please try again later", error.response.data.error);
     }
   }
 
@@ -97,8 +95,7 @@ function UserRegister() {
         password: logPass,
       })
       .then((res) => {
-        alert("welcome",username);
-        localStorage.setItem("sessionToken", res.data.user_id);
+       localStorage.setItem("sessionToken", res.data.user_id);
         navigate("/home");
       })
       .catch((error) => {
@@ -156,8 +153,9 @@ function UserRegister() {
                 className="btn solid"
                 onClick={handleLogin}
               />
-                 <p className="sharath1"style={{color:'Black'}}> Do not have an account? <button className="link-button" type="button" onClick={toggleMode}>Signup</button></p>
-
+                <p className="sharath1" style={{ color: 'black' }}>
+                  Do not have an account?<button className="link-button" type="button" onClick={toggleMode}>Signup</button>
+                </p>
             </form>
 
             {/* Sign-up Form */}
@@ -279,7 +277,9 @@ function UserRegister() {
                 />
               </div>
               <input type="submit" className="btn" value="Sign up" />
-               <p className="sharath1"style={{color:'Black'}}> Already have an account? <button className="link-button" type="button" onClick={toggleMode}>Login</button></p>
+               <p className="sharath1"style={{color:'Black'}}>
+               Already have an account? <button className="link-button" type="button" onClick={toggleMode}>Login</button>
+               </p>
 
             </form>
           </div>

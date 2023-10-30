@@ -1,56 +1,67 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Container, TextField, Button } from '@mui/material';
-import '../styles/AddEducationPage.css';
-import  { useState } from 'react';
+import '../styles/AddExperiencePage.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+function AddExperiencePage() {
+ const loggedInUser=localStorage.getItem("sessionToken");
+ const navigate = useNavigate()
+  const [experienceData, setExperienceData] = useState({
+    userId:loggedInUser,
+    company_name: '',
+    position: '',
+    start_date: '',
+    end_date: '',
+  });
 
 
-function AddExp(){
-  const [companyName, setCompanyName] = useState('');
-  const [position, setPosition] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const handleSave = () => {
-      //saving the experience oage
-    };
-return(
-<Container maxWidth="sm" className="add-education-container">
-      <h2>ADD EXPERIENCE</h2>
-      <div className="education-form">
-        <TextField
-          label="Comapany Name"
-          fullWidth
-          variant="outlined"
-          value={companyName}
-          onChange={(e) => setCompanyName(e.target.value)}
-        />
-        <TextField
-          label="Positon"
-          fullWidth
-          variant="outlined"
-          value={position}
-          onChange={(e) => setPosition(e.target.value)}
-        />
-        <TextField
-          label="Start Date"
-          fullWidth
-          variant="outlined"
-          value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
-          />
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(experienceData)
+      // Send a POST request to your Spring API with the education data
+      await axios.post('http://localhost:8080/experience/addExperience', experienceData);
+      navigate('/home')
+      // Clear the form after successful submission
+      setExperienceData({
+        userId: loggedInUser, // Reset user ID
+        company_name: '',
+        position: '',
+        start_date: '',
+        end_date: '',
+      });
+    } catch (error) {
+
+      console.error('Error adding education data:', error);
+    }
+  };
+
+
+  const handleChange = (field, value) => {
+    setExperienceData({ ...experienceData, [field]: value });
+  };
+
+  return (
+    <Container maxWidth="sm" className="add-experience-container">
+      <h2>Add Experience</h2>
+      <div className="experience-form">
+        {Object.keys(experienceData).map((field) => (
           <TextField
-            label="End date"
+            key={field}
+            label={field.replace(/_/g, ' ')}
             fullWidth
             variant="outlined"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
+            value={experienceData[field]}
+            onChange={(e) => handleChange(field, e.target.value)}
           />
-      </div><br/>
-      <Button variant="contained" color="primary" onClick={handleSave}>
+        ))}
+      </div>
+      <Button variant="contained" color="primary" onClick={ handleSubmit}>
         Save
       </Button>
     </Container>
-
-);
-
+  );
 }
-export default AddExp;
+
+export default AddExperiencePage;

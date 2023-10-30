@@ -1,5 +1,5 @@
 .sidebar{
-        top:120px;
+        top: 1950px;
         width: 560px;
         height:fit-content;
         position:sticky;
@@ -11,6 +11,7 @@
         padding-top: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
+        margin-top: 120px;
 }
 
 .sidebar-top{
@@ -20,6 +21,7 @@
         border-bottom:0;
         padding-bottom:10px;
         line-height:1;
+
 }
 
 .a0{
