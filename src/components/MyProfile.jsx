@@ -60,10 +60,12 @@ async function handleUserSkills() {
   try {
        const response = await axios.get(`http://localhost:8080/skill/${loggedInUser}/getSkill`);
     setSkills(response.data);
+    console.log(skill);
   } catch (error) {
     console.log("Error while fetching user skills:", error);
   }
 }
+
 
 useEffect(() => {
   handleCurrentUser();
@@ -169,7 +171,7 @@ useEffect(() => {
               <h1>Skill Details:</h1>
               <p><b>Skill Type:</b> {skill.skillType}</p>
               <p><b>Skill Name:</b> {skill.skillName}</p>
-              <p><b>Proficiency:</b> {skill.Proficiency}</p>
+              <p><b>Proficiency:</b> {skill.proficiency}</p>
             </li>
           ))}
         </ul>
