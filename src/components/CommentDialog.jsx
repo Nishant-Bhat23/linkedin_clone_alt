@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React,{useEffect,useState} from 'react';
+import axios from 'axios';
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } from '@mui/material';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const CommentDialog = ({ comments,post }) => {
+const CommentDialog = ({ postId, userId }) => {
   const [open, setOpen] = useState(false);
   const [newComment, setNewComment] = useState('');
   const [deletedCommentIndex, setDeletedCommentIndex] = useState(null);
-
+  const [comments, setComments] = useState([]);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -23,17 +24,41 @@ const CommentDialog = ({ comments,post }) => {
   const handleCommentSubmit = () => {
        const newCommentObject = {
          // Generate a unique comment ID
-          postId: 'your_post_id', // Replace with the actual post ID
-          text: newComment,
+          post_id:postId, // Replace with the actual post ID
+          comment_text: newComment,
         };
-    // Add your logic here to submit the new comment to the server
-    // After successfully submitting the comment, update the UI with the new comment.
-    // For demonstration, I'll simply log the new comment to the console.
+      async function handle(){
+      // Fetch posts from the backend or add the initial post to the list of posts
+               try {
+                    await axios.post('http://localhost:8080/post/'+userId+'/postComment',newCommentObject)
+
+               } catch (error) {
+                   console.log("error")
+               }
+    }
+
+ console.log(comments);
+    handle();
     console.log('New Comment:', newComment);
 
     // Clear the input field
     setNewComment('');
   };
+
+   useEffect(() => {
+     async function fetchComments() {
+       try {
+         const response = await axios.get(`http://localhost:8080/post/getComments`);
+         setComments(response.data);
+       } catch (error) {
+         console.error("Error fetching comments:", error);
+       }
+     }
+
+     if (postId) {
+       fetchComments();
+     }
+   }, [postId]);
 
   const handleDeleteComment = (index) => {
     // Add your logic here to delete the comment from the server.
@@ -53,7 +78,7 @@ const CommentDialog = ({ comments,post }) => {
           {comments && comments.length > 0 ? (
             comments.map((comment, index) => (
               <div key={index}>
-                <p>{comment}</p>
+                <p>{comment.comment_text}</p>
                 <IconButton onClick={() => handleDeleteComment(index)}>
                   <DeleteIcon />
                 </IconButton>

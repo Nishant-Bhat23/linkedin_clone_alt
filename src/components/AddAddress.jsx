@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function AddAddressPage() {
  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    address_type: '',
+    address_type:'Select Address Type',
     street_address: '',
     city: '',
     state: '',
@@ -37,7 +37,7 @@ function AddAddressPage() {
 
                setFormData({
                         userId: loggedUser, // Reset user ID
-                        address_type: '',
+                        address_type:'Select Address Type',
                         street_address: '',
                         city: '',
                         state: '',
@@ -61,12 +61,15 @@ function AddAddressPage() {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
          <label>  Address Type </label>
-                <input
-                            type="text"
-                            name="address_type"
-                            value={formData.address_type}
-                            onChange={handleChange}
-                />
+                  <select
+                          name="address_type"
+                          value={formData.address_type}
+                          onChange={handleChange}
+                        >
+                          <option value="Select Address Type">Select Address Type</option>
+                          <option value="Permanent">Permanent</option>
+                          <option value="Current">Current</option>
+                        </select>
 
         </div>
         <div className="form-group">

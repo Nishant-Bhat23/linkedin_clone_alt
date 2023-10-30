@@ -1,0 +1,38 @@
+.people-you-may-know {
+  background: #fff;
+  border: 1px solid #e1e9ef;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.people-you-may-know h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Apply flexbox to the user cards for a neat layout */
+.people-you-may-know .user-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Adjust the spacing between user cards */
+.user-card {
+  width: calc(33.33% - 20px);
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .user-card {
+    width: 100%;
+  }
+}

@@ -1,25 +1,58 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import '../styles/PostItem.css';
 import LikeButton from './LikeButton';
 import CommentDialog from './CommentDialog';
 
 const PostItem = ({ post }) => {
+  const [currentUser, setCurrentUser] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [isContentLoaded, setContentLoaded] = useState(false);
+
+  useEffect(() => {
+    async function fetchUser() {
+      try {
+        const response = await axios.get(`http://localhost:8080/users/${post.user_id}/getUser`);
+        setCurrentUser(response.data);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    }
+
+    if (post.user_id) {
+      fetchUser();
+    }
+  }, [post.user_id]);
+
+
+
+  const handleContentLoad = () => {
+    // This function is called when the content (e.g., image) is loaded
+    setContentLoaded(true);
+  };
+
   return (
     <div className="feed__postItem">
       <div className="feed__postUser">
-        <img src={post.userAvatar} alt="User Profile" />
+        <img src={currentUser.picture} alt="User Profile" />
         <div>
-          <p className="feed__postUserName">{post.userName}</p>
-          <p className="feed__postUserDescription">{post.userDescription}</p>
+          <p className="feed__postUserName">{currentUser.username}</p>
+          <p className="feed__postUserDescription">Developer</p>
         </div>
       </div>
-      <p className="feed__postText">{post.postText}</p>
-      {post.postImage && (
-        <img className="feed__postImage" src={post.postImage} alt="Post Image" />
+      <p className="feed__postText">{post.descr}</p>
+      {post.content && (
+        <img
+          className={`feed__postImage ${isContentLoaded ? 'loaded' : ''}`}
+          src={post.content}
+          alt="Post Image"
+          onLoad={handleContentLoad}
+          onError={() => console.log('Image loading error')}
+        />
       )}
       <div className="feed__postActions">
-        <LikeButton  className="likebutton"/>
-        <CommentDialog comments={post.comments} />
+        <LikeButton className="likebutton" />
+        <CommentDialog  postId={post.post_id} userId={post.user_id} />
       </div>
     </div>
   );

@@ -51,6 +51,12 @@ form.sign-up-form {
   z-index: 1;
 }
 
+
+h5{
+  color:#D32F2F;
+}
+
+
 form.sign-in-form {
   z-index: 2;
 }

@@ -3,19 +3,12 @@ import PostItem from './PostItem';
 import CreateIcon from '@mui/icons-material/Create';
 import CreatePostPage from './CreatePostPage'; // Import the CreatePostPage component
 import '../styles/Feed.css';
+import axios from 'axios';
 
 function Feed() {
   const [posts, setPosts] = useState([]);
 
-  const initialPost = {
-    post_id: 1,
-    picture: 'https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png',
-    userName: 'Sharat Bhat',
-    userDescription: 'Full-Stack Developer',
-    content: '',
-    description: 'This is an example post. #React #BlinkedIn #ALT',
-    baseContent: 'https://miro.medium.com/v2/resize:fit:1400/1*kxBdslclglg4zgCw0NMIIA.png',
-  };
+
    const [isDialogOpen, setDialogOpen] = useState(false);
 
     const openDialog = () => {
@@ -28,7 +21,17 @@ function Feed() {
 
   useEffect(() => {
     // Fetch posts from the backend or add the initial post to the list of posts
-    setPosts([initialPost]);
+    async function fetchData(){
+     try {
+                 const response = await axios.get('http://localhost:8080/post/getPosts')
+                 setPosts(response.data)
+
+             } catch (error) {
+                 console.log('Error fetching posts:', error);
+             }
+     }
+     fetchData();
+
   }, []);
 
 
@@ -60,10 +63,9 @@ return (
 
 
     </div>
-    {posts.map((post) => (
-      <PostItem key={post.id} post={post} />
+ {posts.map((post) => (
+      <PostItem key={post.post_id} post={post} />
     ))}
-
 
   </div>
 );

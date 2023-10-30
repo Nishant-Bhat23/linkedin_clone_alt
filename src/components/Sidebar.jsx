@@ -32,11 +32,14 @@ const handleOpenURL = () => {
 return(
       <div className="sidebar">
          <div className="sidebar-top">
-             <img className="a0" src="https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1380&t=st=1697438511~exp=1697439111~hmac=704212d3be0af0d3cb2357538481daaaf76d1b2dcb2f720e20ccc909a7d4feca"
-             alt=""/>
-             <img src={`${currentUser.picture}`} className="sidebar-avatar"/>
-             <h2 className='sidebar_userName'>{currentUser.username}</h2>
-             <h4 className='sidebar__userDescription '>{currentUser.email}</h4>
+                 <img
+                   className="a0"
+                   src="https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1380&t=st=1697438511~exp=1697439111~hmac=704212d3be0af0d3cb2357538481daaaf76d1b2dcb2f720e20ccc909a7d4feca"
+                   alt=""
+                 />
+                 <img src={currentUser.picture} className="sidebar-avatar" alt="Profile" />
+                 <h2 className="sidebar_userName">{currentUser.username}</h2>
+                 <h4 className="sidebar__userDescription">{currentUser.email}</h4>
 
          </div>
          <div className="sidebar_status">
@@ -52,7 +55,7 @@ return(
          <div className="sidebar_bottom">
              <h3 className="sidebar__discoverHeader">Discover</h3>
                      <ul className="sidebar__discoverList">
-                       <li className="sidebar__discoverItem">People You May Know</li>
+                       <li className="sidebar__discoverItem" onClick={e =>{ navigate("/home/People")}}>People You May Know</li>
                        <li className="sidebar__discoverItem" onClick={handleOpenURL}>Jobs</li>
                        <li className="sidebar__discoverItem">Groups</li>
                        <li className="sidebar__discoverItem" onClick={e =>{ navigate("/AboutUs")}}>AboutUs</li>

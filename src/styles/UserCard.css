@@ -1,0 +1,20 @@
+.user-card {
+  background: #fff;
+  border: 1px solid #e1e9ef;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.user-card p {
+  font-size: 1rem;
+  color: #666;
+}

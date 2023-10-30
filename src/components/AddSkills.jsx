@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, TextField, Button } from '@mui/material';
 import '../styles/AddEducationPage.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function AddSkills() {
   const [skills, setSkills] = useState([
@@ -10,11 +12,26 @@ function AddSkills() {
       proficiency: '',
     },
   ]);
+const navigate = useNavigate();
+  const handleSave = async (e) => {
+    e.preventDefault();
+    const loggedInUser = localStorage.getItem('sessionToken');
+    console.log(skills);
+    try {
 
-  const handleSave = () => {
-    // Handle saving the skills information to the server or perform any desired action
-    // You can also reset the form fields after saving.
-  };
+      // Send a POST request to your Spring API with the skill data
+      await axios.post(`http://localhost:8080/skill/${loggedInUser}/addSkill`, skills);
+      navigate('/home/MyProfile');
+      // Clear the form after successful submission
+      setSkills({
+        skillName: '',
+        skillType: '',
+        Proficiency: '',
+      });
+    } catch (error) {
+      console.error('Error adding skill data:', error);
+    }
+  }
 
   const handleChange = (field, value, index) => {
     const updatedSkills = [...skills];
