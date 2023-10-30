@@ -19,7 +19,7 @@ function AddExperiencePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(experienceData)
+
       // Send a POST request to your Spring API with the education data
       await axios.post('http://localhost:8080/experience/addExperience', experienceData);
       navigate('/home')

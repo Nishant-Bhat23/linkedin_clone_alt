@@ -60,7 +60,7 @@ async function handleUserSkills() {
   try {
        const response = await axios.get(`http://localhost:8080/skill/${loggedInUser}/getSkill`);
     setSkills(response.data);
-    console.log(skill);
+
   } catch (error) {
     console.log("Error while fetching user skills:", error);
   }
@@ -74,10 +74,7 @@ useEffect(() => {
   handleUserExp()
   handleUserSkills(); // Add this line to fetch experience data
 }, []);
-  console.log(education);
-  console.log(address);
-  console.log(experience);
-  console.log(skill);
+
   return (
     <div className="profile">
       <div className="profile-header">

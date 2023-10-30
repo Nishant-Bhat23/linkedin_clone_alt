@@ -21,15 +21,14 @@ function CreatePostPage(props) {
        const formData = new FormData();
         formData.append("content", postData.content);
         formData.append("post_date",postData.postdate );
-        formData.append("descr", postData.description);
+        formData.append("descr", postData.descr);
         formData.append("imageLink", postData.imageLink);
     let user = localStorage.getItem("sessionToken");
         try {
           await axios.post(
-            "http://localhost:8080/post/" + user + "/postupload",
-            formData
+            "http://localhost:8080/post/" + user + "/postupload",formData
           );
-          navigate('/home/myprofile')
+          navigate('/home/MyProfile')
         } catch (error) {
           console.log("Failed     " + error);
         }
@@ -69,8 +68,8 @@ function CreatePostPage(props) {
               label="Add a description..."
               fullWidth
               variant="outlined"
-              value={postData.description}
-              onChange={(e) => handleChange('description', e.target.value)}
+              value={postData.descr}
+              onChange={(e) => handleChange('descr', e.target.value)}
             />
           </div>
           <div className="create-post-base-content">

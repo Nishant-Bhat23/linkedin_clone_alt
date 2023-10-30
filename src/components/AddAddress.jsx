@@ -47,8 +47,6 @@ function AddAddressPage() {
          console.error("Error saving addresses:", error);
        }
 
-
-    console.log(formData);
   };
 
 

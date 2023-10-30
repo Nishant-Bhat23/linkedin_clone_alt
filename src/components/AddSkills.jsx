@@ -17,7 +17,7 @@ function AddSkills() {
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      console.log(skillData);
+
       // Send a POST request to your Spring API with the skill data
       await axios.post(`http://localhost:8080/skill/${loggedInUser}/addSkill`, skillData);
       navigate('/home');
@@ -30,7 +30,7 @@ function AddSkills() {
     } catch (error) {
       console.error('Error adding skill data:', error);
     }
-    console.log(skillData);
+
   }
 const handleChange = (field, value) => {
     setSkillData({ ...skillData, [field]: value });
