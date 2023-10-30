@@ -44,7 +44,7 @@ const PostItem = ({ post }) => {
       {post.content && (
         <img
           className={`feed__postImage ${isContentLoaded ? 'loaded' : ''}`}
-          src={post.content}
+          src={`data:image/png;base64,${post.base64Content}`}
           alt="Post Image"
           onLoad={handleContentLoad}
           onError={() => console.log('Image loading error')}
