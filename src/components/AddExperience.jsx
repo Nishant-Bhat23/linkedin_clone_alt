@@ -8,6 +8,7 @@ function AddExperiencePage() {
  const loggedInUser=localStorage.getItem("sessionToken");
  const navigate = useNavigate()
   const [experienceData, setExperienceData] = useState({
+    userId:loggedInUser,
     company_name: '',
     position: '',
     start_date: '',
