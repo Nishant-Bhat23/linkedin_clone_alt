@@ -49,8 +49,8 @@ async function handleUserAddr() {
 async function handleUserExp() {
   const loggedInUser = localStorage.getItem("sessionToken");
   try {
-    const response = await axios.get('http://localhost:8080/experience/experienceByUserId/' + loggedInUser);
-    setExperience([...experience, response.data]); // Add the API response to the existing experience array
+    const response = await axios.get(`http://localhost:8080/experience/${loggedInUser}/getExperience`);
+    setExperience(response.data); // Add the API response to the existing experience array
   } catch (error) {
     console.log("Error while fetching user experiences:", error);
   }

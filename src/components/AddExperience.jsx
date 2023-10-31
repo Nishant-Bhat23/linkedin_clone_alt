@@ -8,7 +8,6 @@ function AddExperiencePage() {
  const loggedInUser=localStorage.getItem("sessionToken");
  const navigate = useNavigate()
   const [experienceData, setExperienceData] = useState({
-    userId:loggedInUser,
     company_name: '',
     position: '',
     start_date: '',
@@ -21,11 +20,10 @@ function AddExperiencePage() {
     try {
 
       // Send a POST request to your Spring API with the education data
-      await axios.post('http://localhost:8080/experience/addExperience', experienceData);
+     await axios.post(`http://localhost:8080/experience/${loggedInUser}/addExperience`, experienceData);
       navigate('/home/MyProfile')
       // Clear the form after successful submission
       setExperienceData({
-        userId: loggedInUser, // Reset user ID
         company_name: '',
         position: '',
         start_date: '',
