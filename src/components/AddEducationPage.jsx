@@ -8,7 +8,6 @@ function AddEducationPage() {
  const loggedInUser=localStorage.getItem("sessionToken");
  const navigate = useNavigate()
   const [educationData, setEducationData] = useState({
-    userId:loggedInUser,
     tenth_schoolname: '',
     tenth_school_city: '',
     tenth_pass_year: '',

@@ -20,7 +20,7 @@ function AddSkills() {
 
       // Send a POST request to your Spring API with the skill data
       await axios.post(`http://localhost:8080/skill/${loggedInUser}/addSkill`, skillData);
-      navigate('/home');
+      navigate('/home/MyProfile');
       // Clear the form after successful submission
       setSkillData({
         skillName: '',
