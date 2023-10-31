@@ -21,7 +21,7 @@ function AddExperiencePage() {
 
       // Send a POST request to your Spring API with the education data
       await axios.post('http://localhost:8080/experience/addExperience', experienceData);
-      navigate('/home')
+      navigate('/home/MyProfile')
       // Clear the form after successful submission
       setExperienceData({
         userId: loggedInUser, // Reset user ID

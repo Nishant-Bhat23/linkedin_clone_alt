@@ -31,7 +31,7 @@ function AddEducationPage() {
 
       // Send a POST request to your Spring API with the education data
       await axios.post('http://localhost:8080/education/addEducation', educationData);
-      navigate('/home')
+      navigate('/home/MyProfile')
       // Clear the form after successful submission
       setEducationData({
         userId: loggedInUser, // Reset user ID
