@@ -51,7 +51,7 @@ const PostItem = ({ post }) => {
         />
       )}
       <div className="feed__postActions">
-        <LikeButton className="likebutton" />
+        <LikeButton className="likebutton" postId={post.post_id} userId={post.user_id} />
         <CommentDialog  postId={post.post_id} userId={post.user_id} />
       </div>
     </div>

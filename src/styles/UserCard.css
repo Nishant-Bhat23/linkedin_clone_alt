@@ -1,20 +1,41 @@
 .user-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #e1e9ef;
   border-radius: 4px;
   padding: 20px;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
+  max-width: 400px; /* Limit the width of the card */
 }
 
+
 .user-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Slightly larger font size for the name */
   margin-bottom: 8px;
+  color: #333; /* Darker color for the name */
+  padding-right:40px;
+  padding-top:20px;
 }
 
 .user-card p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.2rem; /* Slightly larger font size for the description */
+  color: #555; /* Slightly darker color for the description */
+  margin-bottom: 10px; /* Increased margin-bottom for separation */
+}
+
+/* Add a border at the top for a separation line */
+.user-card::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #e1e9ef;
+  margin: 10px 0;
+}
+
+.user-card img {
+  max-width:100px; /* Set a maximum width for the image */
+  border-radius: 50%; /* Make the image a circle (for a profile picture) */
+  margin-right: 20px; /* Add some spacing to the right of the image */
+  border: 2px solid #e1e9ef; /* Add a border around the image */
 }
