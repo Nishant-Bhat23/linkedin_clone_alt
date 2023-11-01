@@ -1,4 +1,3 @@
-
 import React from "react";
 import '../styles/about1.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
