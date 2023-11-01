@@ -28,8 +28,8 @@ function  AboutUs() {
                       <img src="https://thumbs.dreamstime.com/z/businessman-avatar-illustration-simple-cartoon-user-portrait-user-profile-icon-business-leader-vector-illustration-businessman-276189054.jpg" class="team-img" alt="pic" />                   
                       <h3>NISHANT BHAT</h3>            
                       <div class="team-info"><p> INTERN </p></div>
-                      <p>Nishant Bhat is student in a department of Computer Science and Engineering at New Horizon College fo Engg ,Banglore.
-                        and pursuing intership at Alt Digital Tecnologies</p>
+                      <p>Nishant Bhat is a student in the department of Computer Science and Engineering at New Horizon College fo Engineering ,Bengaluru.
+                        and pursuing internship at Alt Digital Technologies</p>
                   
                       <ul class="team-icon">
                       
@@ -63,19 +63,19 @@ function  AboutUs() {
                       
                       <div class="team-info"><p>INTERN</p></div>
 
-                      <p>Sharath Bhat is  student in a department of Information Scinece and Engineering at Global Academy Of Technology RR Nagar,Banglore.
-                        and pursuing intership at Alt Digital Tecnologies
+                      <p>Sharath Bhat is a student in the department of Information Science and Engineering at Global Academy Of Technology RR Nagar,Bengaluru.
+                        and pursuing internship at Alt Digital Technologies
                       </p>
                   
                       <ul class="team-icon">
                       
-                          <li><a href="#" class="twitter"id="blk"><i class="bi bi-twitter-x"></i></a></li>
+                          <li><a href="https://twitter.com/sharathbhat2202" class="twitter" id="blk"><i class="bi bi-twitter-x"></i></a></li>
                           
-                          <li><a href="#" class="pinterest"id="blk"><i class="bi bi-linkedin"></i></a></li>
+                          <li><a href="https://www.linkedin.com/in/sharath-bhat-1503a428a" class="linkedin"id="blk"><i class="bi bi-linkedin"></i></a></li>
                           
                           <li><a href="#" class="skype" id="blk"><i class="bi bi-skype"></i></a></li>
                           
-                          <li><a href="#" class="dribble"id="blk"><i class="bi bi-github"></i></a></li>
+                          <li><a href="https://github.com/sharath2243" class="github"id="blk"><i class="bi bi-github"></i></a></li>
                           
                       </ul>
                       
@@ -92,18 +92,18 @@ function  AboutUs() {
                       
                       <div class="team-info"><p>INTERN</p></div>
 
-                      <p>Sujay Hegde is  student in a department of Information Scinece and Engineering at Global Academy Of Technology RR Nagar,Banglore.
-                        and pursuing intership at Alt Digital Tecnologies.</p>
+                      <p>Sujay Hegde is a student in the department of Information Science and Engineering at Global Academy Of Technology RR Nagar,Bengaluru.
+                        and pursuing internship at Alt Digital Technologies.</p>
                   
                       <ul class="team-icon">
                       
                           <li><a href="#" class="twitter"id="blk"><i class="bi bi-twitter-x"></i></a></li>
                           
-                          <li><a href="#" class="pinterest"id="blk"><i class="bi bi-linkedin"></i></a></li>
+                          <li><a href="https://www.linkedin.com/in/sujay-hegde-18aa86182" class="linkedin"id="blk"><i class="bi bi-linkedin"></i></a></li>
                           
                           <li><a href="#" class="skype" id="blk"><i class="bi bi-skype"></i></a></li>
                           
-                          <li><a href="#" class="dribble"id="blk">
+                          <li><a href="https://github.com/SuJaY04O1" class="github"id="blk">
                             <i class="bi bi-github"></i>
                         </a></li>
                           
@@ -121,8 +121,8 @@ function  AboutUs() {
                       
                       <div class="team-info"><p>INTERN</p></div>
 
-                      <p>Sagar is student in a department of Information Scinece and Engineering at Global Academy Of Technology RR Nagar,Banglore.
-                        and pursuing intership at Alt Digital Tecnologies</p>
+                      <p>Sagar is a student in the department of Information Science and Engineering at Global Academy Of Technology RR Nagar,Bengaluru.
+                        and pursuing internship at Alt Digital Technologies</p>
                       <ul class="team-icon">
                       
                           <li><a href="https://twitter.com/Sagarkc30" class="twitter" id="blk"><i class="bi bi-twitter-x"></i></a></li>

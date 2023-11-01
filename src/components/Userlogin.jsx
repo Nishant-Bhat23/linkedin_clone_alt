@@ -145,7 +145,7 @@ function UserRegister() {
                 />
               </div>
               <div>
-                <h5 style={{ color: 'red' }}>{loginError}</h5>
+                <h5 style={{ color:  'red' }}>{loginError}</h5>
               </div>
               <input
                 type="submit"
@@ -180,7 +180,7 @@ function UserRegister() {
               </div>
               {showError && (
                 <div>
-                     <h5 style={{ color: 'red' }}>{usernameError}</h5>
+                     <h5 style={{ color:  'red' }}>{usernameError}</h5>
                 </div>
               )}
               <div className="input-field">
@@ -196,7 +196,7 @@ function UserRegister() {
                 />
               </div>
               <div className="nameError">
-                <h5 style={{ color: 'red' }}>{firstnameMessage}</h5>
+                <h5 style={{ color:  'red' }}>{firstnameMessage}</h5>
               </div>
               <div className="input-field">
                 <i className="fas fa-user"></i>
@@ -235,7 +235,7 @@ function UserRegister() {
                 />
               </div>
               <div className="passError">
-                <h5 style={{ color: 'red' }}>{messagePassword}</h5>
+                <h5 style={{ color:  'red' }}>{messagePassword}</h5>
               </div>
               <div className="input-field">
                 <i className="fas fa-lock"></i>
@@ -250,7 +250,7 @@ function UserRegister() {
                 />
               </div>
               <div className="passError">
-                <h5 style={{ color: 'red' }}>{errorPass}</h5>
+                <h5 style={{ color:  'red' }}>{errorPass}</h5>
               </div>
               <div className="input-field">
                 <i className="fas fa-phone"></i>
