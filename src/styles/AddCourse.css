@@ -1,0 +1,60 @@
+/* education.css */
+
+/* Main container styles */
+.addCourseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form styles */
+.education-container {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+}
+
+.education-heading {
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #333;
+}
+
+/* Input field styles */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styles for Submit */
+.action-button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Hide other buttons */
+.action-button:not([type="submit"]) {
+  display: none;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 10px;
+  }
+}
