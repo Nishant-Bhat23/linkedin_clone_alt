@@ -58,6 +58,7 @@ return(
                        <li className="sidebar__discoverItem" onClick={e =>{ navigate("/home/People")}}>People You May Know</li>
                        <li className="sidebar__discoverItem" onClick={handleOpenURL}>Jobs</li>
                       <li className="sidebar__discoverItem" onClick={e =>{ navigate("/home/education/AddCourse")}}>Click Here to Enter marks</li>
+                      <li className="sidebar__discoverItem" onClick={e =>{ navigate("/home/education/MyCourse")}}>My Academics</li>
                       <li className="sidebar__discoverItem" onClick={e =>{ navigate("/AboutUs")}}>AboutUs</li>
                      </ul>
 

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {  useNavigate } from "react-router-dom";
 import "../styles/AddCourse.css"; // Import your stylesheet
 
 function AddCourse() {
-  const [course, setCourse] = useState({
+    const navigate = useNavigate();
+     const [course, setCourse] = useState({
     name: "",
     semesters: [
       {
@@ -114,6 +116,7 @@ function AddCourse() {
           },
         ],
       });
+      navigate("/home/education/MyCourse");
     } catch (error) {
       // Handle any errors
       console.error(error);

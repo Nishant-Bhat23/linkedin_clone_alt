@@ -11,6 +11,7 @@ import AddSkills from '../components/AddSkills.jsx'
 import AddAddress from '../components/AddAddress.jsx'
 import People from '../components/PeopleYouMayKnow.jsx'
 import AddCourse from '../components/AddCourse.jsx'
+import MyCourses from '../components/MyCourses.jsx'
 
 function GlobalRoutes() {
     const handleOut = () =>{
@@ -30,6 +31,7 @@ function GlobalRoutes() {
                 <Route path='/home/MyProfile/AddAddress' element={<AddAddress/>}  />
                 <Route path='/home/People' element={<People/>}  />
                 <Route path='home/education/AddCourse' element={<AddCourse />} />
+                <Route path='home/education/MyCourse' element={<MyCourses />} />
         </Routes>
      );
 }
