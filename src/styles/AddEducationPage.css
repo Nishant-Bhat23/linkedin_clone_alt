@@ -51,3 +51,6 @@
   background-color: #b5c0c6;
   cursor: not-allowed;
 }
+.error-message {
+  color: red;
+}
